@@ -32,41 +32,65 @@
             "firstName": "Rainu",
             "lastName": "Ittycheriah",
             "age": 25,
-            "computerId": 1
+            "computerId": 1,
+            "departmentId": 1
         },
         {
             "id": 2,
             "firstName": "Matthew",
             "lastName": "Johnson",
-            "computerId": 2
+            "computerId": 2,
+            "departmentId": 3
         },
         {
             "id": 3,
             "firstName": "Nathaniel",
             "lastName": "Smith",
             "age": 25,
-            "computerId": 2
+            "computerId": 2,
+            "departmentId": 4
         },
         {
             "id": 4,
             "firstName": "Seraphina",
             "lastName": "Perry",
             "age": 25,
-            "computerId": 3
+            "computerId": 3,
+            "departmentId": 2
         },
         {
             "id": 5,
             "firstName": "Bryan",
             "lastName": "Winger",
             "age": 25,
-            "computerId": 4
+            "computerId": 4,
+            "departmentId": 2
         },
         {
             "id": 6,
             "firstName": "Roi",
             "lastName": "Massey",
             "age": 25,
-            "computerId": 5
+            "computerId": 5,
+            "departmentId": 1
+        }
+    ],
+    "departments": [
+        {
+            "id": 1,
+            "name": "Marketing"
+        },
+        {
+            "id": 2,
+            "name": "HR"
+        },
+        {
+            "id": 3,
+            "name": "Training"
+        },
+        {
+            "id": 4,
+            "name": "IT"
         }
     ]
 }
