@@ -2,10 +2,18 @@ export const employeeAsHTML = (employeeObj) => {
     return `
     
     <section>
-        <div>Name: ${employeeObj.firstName} ${employeeObj.lastName}</div>
-        <div>Age: ${employeeObj.age}</div>
-        <div>Computer: ${employeeObj.computer.model}</div>
-        <div>Year: ${employeeObj.computer.year}</div>
+        <header class="employee__name">
+            <h1>Name: ${employeeObj.firstName} ${employeeObj.lastName}</h1>
+        </header>
+        <section class="employee__computer">
+            Currently using a ${employeeObj.computer.year} ${employeeObj.computer.model}</div>
+        </section>
+        <section class="employee__department">
+            Works in the ${employeeObj.department.name} department
+        </section>
+        <section class="employee__location">
+            Works at the ${employeeObj.location.location} office
+        </section>
     </section>
     
     
