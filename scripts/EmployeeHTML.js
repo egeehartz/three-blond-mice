@@ -11,6 +11,9 @@ export const employeeAsHTML = (employeeObj) => {
         <section class="employee__department">
             Works in the ${employeeObj.department.name} department
         </section>
+        <section class="employee__location">
+            Works at the ${employeeObj.location.location} office
+        </section>
     </section>
     
     

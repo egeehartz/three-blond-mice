@@ -33,14 +33,16 @@
             "lastName": "Ittycheriah",
             "age": 25,
             "computerId": 1,
-            "departmentId": 1
+            "departmentId": 1,
+            "locationId": 1
         },
         {
             "id": 2,
             "firstName": "Matthew",
             "lastName": "Johnson",
             "computerId": 2,
-            "departmentId": 3
+            "departmentId": 3,
+            "locationId": 2
         },
         {
             "id": 3,
@@ -48,7 +50,8 @@
             "lastName": "Smith",
             "age": 25,
             "computerId": 2,
-            "departmentId": 4
+            "departmentId": 4,
+            "locationId": 3
         },
         {
             "id": 4,
@@ -56,7 +59,8 @@
             "lastName": "Perry",
             "age": 25,
             "computerId": 3,
-            "departmentId": 2
+            "departmentId": 2,
+            "locationId": 1
         },
         {
             "id": 5,
@@ -64,7 +68,8 @@
             "lastName": "Winger",
             "age": 25,
             "computerId": 4,
-            "departmentId": 2
+            "departmentId": 2,
+            "locationId": 2
         },
         {
             "id": 6,
@@ -72,7 +77,8 @@
             "lastName": "Massey",
             "age": 25,
             "computerId": 5,
-            "departmentId": 1
+            "departmentId": 1,
+            "locationId": 3
         }
     ],
     "departments": [
@@ -91,6 +97,20 @@
         {
             "id": 4,
             "name": "IT"
+        }
+    ],
+    "locations": [
+        {
+            "id": 1,
+            "location":"Nashville"
+        },
+        {
+            "id": 2,
+            "location":"Atlanta"
+        },
+        {
+            "id": 3,
+            "location":"Memphis"
         }
     ]
 }
