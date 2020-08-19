@@ -2,7 +2,7 @@ let departments = []
 
 
 
-export const getLocations = () => {
+export const getDepartments = () => {
     return fetch('http://localhost:3000/departments')
         .then(resp => resp.json())
         .then(parsedRes => {
@@ -13,7 +13,7 @@ export const getLocations = () => {
 }
 
 
-export const useLocations = () => {
+export const useDepartments = () => {
     return departments.slice()
 
 }

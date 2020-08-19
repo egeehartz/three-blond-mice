@@ -1,18 +1,18 @@
-export const employeeAsHTML = (employeeObj) => {
+export const employeeAsHTML = (employeeObj, computerObj, departmentObj, locationObj) => {
     return `
     
     <section>
         <header class="employee__name">
-            <h1>Name: ${employeeObj.firstName} ${employeeObj.lastName}</h1>
+            <h1>${employeeObj.firstName} ${employeeObj.lastName}</h1>
         </header>
         <section class="employee__computer">
-            Currently using a ${employeeObj.computer.year} ${employeeObj.computer.model}</div>
+            Currently using a ${computerObj.year} ${computerObj.model}</div>
         </section>
         <section class="employee__department">
-            Works in the ${employeeObj.department.name} department
+            Works in the ${departmentObj.name} department
         </section>
         <section class="employee__location">
-            Works at the ${employeeObj.location.location} office
+            Works at the ${locationObj.location} office
         </section>
     </section>
     
