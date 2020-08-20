@@ -3,7 +3,7 @@ let employeeCustomers = []
 
 
 export const getEmployeeCustomers = () => {
-    return fetch('http://localhost:3000/computers')
+    return fetch('http://localhost:3000/employeeCustomers')
         .then(resp => resp.json())
         .then(parsedRes => {
             employeeCustomers = parsedRes

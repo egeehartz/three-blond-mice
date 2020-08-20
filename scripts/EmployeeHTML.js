@@ -19,8 +19,8 @@ export const employeeAsHTML = (employeeObj, computerObj, departmentObj, location
         <ul>
             ${
                 customerObj.map(customer => {
-                    
-                })
+                    return `<li>${customer.name}</li>`
+                }).join("")
             }
         </ul>
     </section>

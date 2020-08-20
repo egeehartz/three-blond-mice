@@ -3,6 +3,8 @@ import { employeeAsHTML } from "./EmployeeHTML.js"
 import {getDepartments, useDepartments} from "./DepartmentProvider.js"
 import {getLocations, useLocations} from "./LocationProvider.js"
 import {getComputers, useComputers} from "./ComputerProvider.js"
+import {useCustomers, getCustomers} from "./CustomerProvider.js"
+import {useEmployeeCustomers, getEmployeeCustomers} from "./EmployeeCustomerProvider.js"
 
 
 
@@ -16,6 +18,8 @@ const render = (employeeArray) => {
     getComputers()
         .then(getDepartments)
         .then(getLocations)
+        .then(getCustomers)
+        .then(getEmployeeCustomers)
         .then( () => {
             const computers = useComputers()
             const departments = useDepartments()
@@ -32,17 +36,15 @@ const render = (employeeArray) => {
 
                 //.filter() for * -> * because we need to find ALL that matches
                     // Find all the customer relationships, gonna return an array of 2 customers because each employee has 2
-                    const customerEmployeeRelation = customerRelationships.filter(ec => ec.employee.id === employeeId)
+                    const customerEmployeeRelation = customerRelationships.filter(ec => ec.employeeId === employee.id)
+                    const assignedCustomers = customerEmployeeRelation.map(rc => {
+                      return customers.find(customer => customer.id === rc.customerId)
+                    })
 
-                    // Find the related customer for each relationship
-                    const assignedCustomers = customerEmployeeRelation.map(rel => {
-                        return customers.find(customer => customer.id === rel.customerId)
-
-            
-                        
+                    return employeeAsHTML(employee, computerFound, deptFound, locationFound, assignedCustomers)  
                     }).join("")
-                    employeeAsHTML(employee, computerFound, deptFound, locationFound, assignedCustomers)
-                    return eventHub.innerHTML = rep
+                    
+                     eventHub.innerHTML = rep
 
 
         })
