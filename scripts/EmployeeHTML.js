@@ -1,4 +1,4 @@
-export const employeeAsHTML = (employeeObj, computerObj, departmentObj, locationObj) => {
+export const employeeAsHTML = (employeeObj, computerObj, departmentObj, locationObj, customerObj) => {
     return `
     
     <section>
@@ -14,6 +14,16 @@ export const employeeAsHTML = (employeeObj, computerObj, departmentObj, location
         <section class="employee__location">
             Works at the ${locationObj.location} office
         </section>
+        <section class="employee__customers">
+        Has worked for the following customers.
+        <ul>
+            ${
+                customerObj.map(customer => {
+                    return `<li>${customer.name}</li>`
+                }).join("")
+            }
+        </ul>
+    </section>
     </section>
     
     
